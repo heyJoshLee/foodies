@@ -12,12 +12,7 @@ const UserTabs = () => {
         <li className="nav-item" role="presentation">
           <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Recipes</button>
         </li>
-        <li className="nav-item" role="presentation">
-          <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
-        </li>
-        <li className="nav-item" role="presentation">
-          <button className="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
-        </li>
+
       </ul>
       <div className="tab-content p-3" id="myTabContent">
         <div className="tab-pane fade show active"

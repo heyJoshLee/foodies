@@ -1,7 +1,7 @@
 import React from 'react';
 import Post from './Post';
 import ProfilePlaceHolder from '../../assets/images/profile-placeholder.png';
-const PostList = () => {
+const Posts = () => {
 
   const posts = [
     {
@@ -38,4 +38,4 @@ const PostList = () => {
   );
 }
 
-export default PostList;
+export default Posts;

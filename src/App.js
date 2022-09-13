@@ -1,20 +1,44 @@
 import './App.css';
-import Feed from './components/Feed';
+import Feed from './components/Feed/Feed';
 import { Routes, Route } from 'react-router-dom';
 import User from './components/UserPage/User';
 import Recipe from './components/Recipes/Recipe';
-
-
+import Nav from './components/Nav/Nav';
+import Recipes from './components/Recipes/Recipes';
+import Messages from './components/Messages/Messages';
+import SavedItems from './components/SavedItems/SavedItems';
+import Tags from './components/Tags/Tags';
+import Tag from './components/Tags/Tag';
+import ExploreBar from './components/ExploreBar/ExploreBar';
 function App() {
+
+
+
   return (
     <div className="App">
-      <div className='container-flex'>
-        <Routes>
-          <Route path='/' element={<Feed />} />
-          <Route path='/users/:id' element={<User />} />
-          <Route path='/recipes/:id' element={<Recipe />} />
+      <div className='container-flex p-4'>
+        <div className='row container'>
+          <div className='col-2'>
+            <Nav />
+          </div>
+          <main className='col-7 p-2'>
+            <Routes>
+              <Route path='/' element={<Feed />} />
+              <Route path='/users/:id' element={<User />} />
+              <Route path='/recipes' element={<Recipes />} />
+              <Route path='/recipes/:id' element={<Recipe />} />
+              <Route path='/tags' element={<Tags />} />
+              <Route path='/tags/:id' element={<Tag />} />
+              <Route path='/messages' element={<Messages />} />
+              <Route path='/saved' element={<SavedItems />} />
+            </Routes>
+          </main>
+          <div className='col-3'>
+            <ExploreBar />
+          </div>
 
-        </Routes>
+        </div>
+
       </div>
     </div>
   );

@@ -91,7 +91,7 @@ const Recipe = () => {
         </div>
         <span className='col  fst-italic'>({reviewCount})</span>
       </div>
-      <img src={image} style={styles.mainImage} className='mx-auto d-block' />
+      <img src={image} style={styles.mainImage} className='mx-auto d-block mt-4' />
       <RecipeInfoBox />
       <div className='row'>
         <div className='col'>
