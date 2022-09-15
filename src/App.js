@@ -9,7 +9,6 @@ import MessagesPage from './components/Messages/MessagesPage';
 import SavedItems from './components/SavedItems/SavedItems';
 import Tags from './components/Tags/Tags';
 import Tag from './components/Tags/Tag';
-import ExploreBar from './components/ExploreBar/ExploreBar';
 function App() {
 
 
@@ -17,11 +16,11 @@ function App() {
   return (
     <div className="App">
       <div className='container-flex p-4'>
-        <div className='row container'>
+        <div className='row'>
           <div className='col-2'>
             <Nav />
           </div>
-          <main className='col-7 p-2'>
+          <main className='col-10 p-2'>
             <Routes>
               <Route path='/' element={<Feed />} />
               <Route path='/users/:id' element={<User />} />
@@ -33,9 +32,6 @@ function App() {
               <Route path='/saved' element={<SavedItems />} />
             </Routes>
           </main>
-          <div className='col-3'>
-            <ExploreBar />
-          </div>
 
         </div>
 

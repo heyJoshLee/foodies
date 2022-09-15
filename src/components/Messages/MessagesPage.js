@@ -16,10 +16,9 @@ const MessagesPage = () => {
   }, [])
 
 
-
   return (
     <div className='row'>
-      <MessageThreadsContainer messages={messageThreadsState} />
+      <MessageThreadsContainer messageThreads={messageThreadsState} />
       <MessageThread />
     </div>
   )

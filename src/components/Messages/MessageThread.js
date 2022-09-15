@@ -6,7 +6,7 @@ const MessageThread = (props) => {
   const messageThreadStore = useSelector((state) => state.messageThread);
 
   return (
-    <div className='col-4'>
+    <div className='col-7'>
       <MessagesContainer messageThread={messageThreadStore} />
     </div>
   )
