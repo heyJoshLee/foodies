@@ -20,7 +20,7 @@ const LoadingPiece = (props) => {
   }
 
   return (
-    <div class='loading-piece' style={styles.loadingPiece}></div>
+    <div className='loading-piece' style={styles.loadingPiece}></div>
   )
 }
 
