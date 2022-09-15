@@ -5,7 +5,7 @@ import User from './components/UserPage/User';
 import Recipe from './components/Recipes/Recipe';
 import Nav from './components/Nav/Nav';
 import Recipes from './components/Recipes/Recipes';
-import Messages from './components/Messages/Messages';
+import MessagesPage from './components/Messages/MessagesPage';
 import SavedItems from './components/SavedItems/SavedItems';
 import Tags from './components/Tags/Tags';
 import Tag from './components/Tags/Tag';
@@ -29,7 +29,7 @@ function App() {
               <Route path='/recipes/:id' element={<Recipe />} />
               <Route path='/tags' element={<Tags />} />
               <Route path='/tags/:id' element={<Tag />} />
-              <Route path='/messages' element={<Messages />} />
+              <Route path='/messages' element={<MessagesPage />} />
               <Route path='/saved' element={<SavedItems />} />
             </Routes>
           </main>
