@@ -1,11 +1,13 @@
 import React from 'react';
-import Message from './Message';
-import OtherUserPreview from './OtherUserPreview';
+import MessagesContainer from './MessagesContainer';
+import { useSelector } from 'react-redux';
 const MessageThread = (props) => {
 
+  const messageThreadStore = useSelector((state) => state.messageThread);
+
   return (
-    <div>
-      Message Thread
+    <div className='col-4'>
+      <MessagesContainer messageThread={messageThreadStore} />
     </div>
   )
 }

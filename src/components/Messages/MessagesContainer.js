@@ -1,9 +1,10 @@
 import React from 'react';
 import Messages from './Messages';
-const MessagesContainer = () => {
+const MessagesContainer = (props) => {
+  const { messages } = props.messageThread;
   return (
     <div>
-      <Messages />
+      <Messages messages={messages} />
     </div>
   )
 }

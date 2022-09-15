@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const generate = () => {
+        const numberOfPieces = 8;
+        const containerSize = 400;
+        const pieceHeight = containerSize / 5;
+        const pieceWidth = containerSize / 20;
+        const padding = containerSize * 0.05;
+
+        const pieceValues = [
+          {
+            top: `${padding * 1.5}px`,
+            left: `${containerSize / 2 - containerSize / 20}px`,
+            rotation: "none",
+          },
+          {
+            top: `${containerSize * 0.3 - pieceHeight + padding}px`,
+            left: `${containerSize * 0.75 - pieceWidth - padding / 1.5}px`,
+            rotation: "rotate(45deg)",
+          },
+          {
+            top: `${containerSize * 0.6 - pieceHeight + padding / 3}px`,
+            left: `${containerSize * 0.8 - pieceWidth - padding / 1.5}px`,
+            rotation: "rotate(90deg)",
+          },
+          {
+            top: `${containerSize * 0.9 - pieceHeight - padding / 3}px`,
+            left: `${containerSize * 0.8 - pieceWidth - padding / 1.5}px`,
+            rotation: "rotate(135deg)",
+          },
+          {
+            top: `${containerSize - pieceHeight - padding / 1.5}px`,
+            left: `${containerSize / 2 - containerSize / 20}px`,
+            rotation: "none",
+          },
+          {
+            top: `${containerSize * 0.9 - pieceHeight - padding / 3}px`,
+            left: `${containerSize * 0.2 - pieceWidth + padding / 1.5}px`,
+            rotation: "rotate(-135deg)",
+          },
+          {
+            top: `${containerSize * 0.6 - pieceHeight + padding / 3}px`,
+            left: `${containerSize * 0.2 - pieceWidth + padding / 1.5}px`,
+            rotation: "rotate(90deg)",
+          },
+          {
+            top: `${containerSize * 0.3 - pieceHeight + padding}px`,
+            left: `${containerSize * 0.25 - pieceWidth + padding / 1.5}px`,
+            rotation: "rotate(-45deg)",
+          },
+        ];
+        const createContainer = () => {
+          const element = document.createElement("div");
+          element.style.width = `${containerSize}px`;
+          element.style.height = `${containerSize}px`;
+          element.style.position = "relative";
+          element.style.border = "1px solid red";
+          document.body.appendChild(element);
+          return element;
+        };
+        const container = createContainer();
+        const setDefaultPieceStyles = (piece) => {
+          piece.style.width = `${pieceWidth}px`;
+          piece.style.height = `${pieceHeight}px`;
+          piece.style.backgroundColor = "lightgrey";
+          piece.style.position = "absolute";
+        };
+
+        const createPiece = (piece, index) => {
+          const { top, left, rotation } = piece;
+          const pieceElement = document.createElement("div");
+          setDefaultPieceStyles(pieceElement);
+          pieceElement.style.top = top;
+          pieceElement.style.left = left;
+          pieceElement.style.transform = rotation;
+          pieceElement.style.borderRadius = "10px";
+          container.appendChild(pieceElement);
+
+          setTimeout(() => {
+            setInterval(() => {
+              const currentOpacity =
+                getComputedStyle(pieceElement).getPropertyValue("opacity");
+              if (currentOpacity <= 0) {
+                pieceElement.style.opacity = 1;
+              } else {
+                pieceElement.style.opacity -= 10;
+              }
+            }, 800);
+          }, index * 100);
+        };
+
+        pieceValues.forEach((piece, index) => createPiece(piece, index));
+      };
+
+      generate();
+
+      const grid = () => {
+        const containerSize = 400;
+
+        const sideSize = containerSize / 80;
+        const size = containerSize / sideSize;
+
+        for (let j = 0; j < sideSize; j++) {
+          for (let i = 0; i < sideSize; i++) {
+            const element = document.createElement("div");
+            element.style.border = "5px solid red";
+            element.style.width = `${size}px`;
+            element.style.height = `${size}px`;
+            element.style.position = "absolute";
+            element.style.top = `${j * size}px`;
+            element.style.left = `${i * size}px`;
+
+            element.style.zIndex = "1";
+            document.body.appendChild(element);
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
