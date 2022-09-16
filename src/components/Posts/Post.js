@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Post = (props) => {
-  console.log(props)
-  console.log(props.post)
   const { username, image, _id } = props.post.user;
   const { content, time } = props.post;
 

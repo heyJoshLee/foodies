@@ -1,7 +1,11 @@
 #To do
 
-finish message and message threads UI
+##Messages
 
-<a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect - Flaticon</a>
+- Backend
+- Truncate thread preview
+- Fix profile image on Message component
+- Support file uploading
+  <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect - Flaticon</a>
 
 <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Freepik - Flaticon</a>

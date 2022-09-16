@@ -1,39 +1,11 @@
 import React from 'react';
 import Post from './Post';
-import ProfilePlaceHolder from '../../assets/images/profile-placeholder.png';
+import posts from '../../TEST_DATA_DELETE_ME/posts';
 const Posts = () => {
-
-  const posts = [
-    {
-      user: {
-        username: "josh1",
-        image: ProfilePlaceHolder,
-        _id: 1
-      },
-      content: "this is a cool post",
-      time: new Date()
-    }, {
-      user: {
-        username: "josh2",
-        image: ProfilePlaceHolder,
-        _id: 2
-      },
-      content: "Wow this is great",
-      time: new Date()
-    }, {
-      user: {
-        username: "josh3",
-        image: ProfilePlaceHolder,
-        _id: 3
-      },
-      content: "Another cool post",
-      time: new Date()
-    }
-  ]
 
   return (
     <div className='post-list container'>
-      {posts.map((post) => <Post post={post} />)}
+      {posts.map((post) => <Post key={`post-${post._id}`} post={post} />)}
     </div>
   );
 }

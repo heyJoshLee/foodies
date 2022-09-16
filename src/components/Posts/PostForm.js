@@ -26,7 +26,7 @@ const PostForm = () => {
           <div className='col-md-8'>
             <div className='card-body'>
               <div className="mb-3">
-                <label for="exampleFormControlTextarea1" className="form-label">New post</label>
+                <label htmlFor="exampleFormControlTextarea1" className="form-label">New post</label>
                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 <button type='button' className='btn btn-primary btn-lg float-end mt-3'>Post</button>
               </div>
