@@ -3,9 +3,8 @@ import Message from './Message';
 const Messages = (props) => {
   const { messages } = props;
   return (
-    <div>
-
-      {messages.map((message) => <Message message={message} />)}
+    <div className='d-flex flex-column'>
+      {messages.map((message) => <Message key={`message-${message._id}`} message={message} />)}
     </div>
   )
 }

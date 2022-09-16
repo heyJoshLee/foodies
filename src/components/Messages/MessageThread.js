@@ -1,13 +1,18 @@
 import React from 'react';
 import MessagesContainer from './MessagesContainer';
-import { useSelector } from 'react-redux';
+import Loading from '../General/Loading/Loading';
+import MessageContainerHeader from './MessageContainerHeader';
+import NewMessageForm from './NewMessageForm';
 const MessageThread = (props) => {
 
-  const messageThreadStore = useSelector((state) => state.messageThread);
+  const { messageThread } = props;
 
+  if (!messageThread) { return <Loading /> }
   return (
     <div className='col-7'>
-      <MessagesContainer messageThread={messageThreadStore} />
+      <MessageContainerHeader messageThread={messageThread} />
+      <MessagesContainer messageThread={messageThread} />
+      <NewMessageForm messageThread={messageThread} />
     </div>
   )
 }

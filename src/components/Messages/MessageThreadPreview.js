@@ -1,15 +1,13 @@
 import React from 'react';
-import Message from './Message';
-import OtherUserPreview from './OtherUserPreview';
-import { useDispatch } from 'react-redux';
+import UserPreview from './UserPreview';
+import { useDispatch, useSelector } from 'react-redux';
 import { getMessageThread } from '../../reducers/messageThreadSlice';
 const MessageThreadPreview = (props) => {
   const { messages, users, _id } = props.messageThread;
   const dispatch = useDispatch();
+  const messageThread = useSelector((store) => store.messageThread);
 
-  const currentUser = {
-    username: 'josh'
-  }
+  const currentUser = { username: 'josh' }
 
 
   const setCurrentMessageThread = () => {
@@ -23,13 +21,26 @@ const MessageThreadPreview = (props) => {
 
   const lastMessage = messages[0];
 
+  const styles = {
+    selectedThread: {
+      backgroundColor: 'lightgrey'
+    }
+  }
+
+  const isSelectedThread = messageThread._id === _id;
+
 
   return (
     <div>
-      <div className="card mb-3" onClick={setCurrentMessageThread} onMouseEnter={turnOnPointer} onMouseLeave={turnOffPointer}>
+      <div className="card mb-3 p-2"
+        onClick={setCurrentMessageThread}
+        onMouseEnter={turnOnPointer}
+        onMouseLeave={turnOffPointer}
+        style={isSelectedThread ? styles.selectedThread : {}}
+      >
         <div className="row g-0">
           <div className="col-md-4">
-            {otherUsers.map((otherUser) => <OtherUserPreview user={otherUser} />)}
+            {otherUsers.map((otherUser) => <UserPreview user={otherUser} />)}
           </div>
           <div className="col-md-8">
             <div className="card-body">
@@ -40,7 +51,7 @@ const MessageThreadPreview = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

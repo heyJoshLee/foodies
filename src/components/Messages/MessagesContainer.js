@@ -1,7 +1,7 @@
 import React from 'react';
 import Messages from './Messages';
 const MessagesContainer = (props) => {
-  const messages = props.messageThread.messsages || [];
+  const messages = props.messageThread.messages || [];
 
   return (
     <div>
