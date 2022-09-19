@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import RecipePlaceholderImage from '../../assets/images/recipe-image-placeholder.jpg';
-import ImagePlaceholder from '../../assets/images/profile-placeholder.png';
 import RecipeInfoBox from './RecipeInfoBox';
 import StarRating from './StarRating';
 import RecipeIngredients from './RecipeIngredients';
@@ -54,7 +52,7 @@ const Recipe = () => {
           <RecipeDirections directions={recipeState.directions} />
         </div>
       </div>
-      <Reviews reviews={recipeState.reviews} />
+      <Reviews reviews={recipeState.reviews} recipe={recipeState} />
     </div >
   )
 }

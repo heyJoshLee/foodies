@@ -1,5 +1,9 @@
 #To do
 
+## reviews
+
+- Call api to see if the current user has reviewed the current item. Render contional components
+
 ##Messages
 
 - Backend

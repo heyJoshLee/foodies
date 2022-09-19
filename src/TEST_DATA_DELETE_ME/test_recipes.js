@@ -52,7 +52,7 @@ const recipe1 = {
         image: ImagePlaceholder
       },
       rating: 3,
-      content: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq'
+      content: 'good'
     }, {
       user: {
         username: 'josh',
@@ -60,7 +60,7 @@ const recipe1 = {
         image: ImagePlaceholder
       },
       rating: 3,
-      content: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq'
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum ut tristique et egestas. Dolor magna eget est lorem ipsum dolor. Pellentesque adipiscing commodo elit at imperdiet. Volutpat maecenas volutpat blandit aliquam etiam. Dignissim enim sit amet venenatis urna cursus. Et ultrices neque ornare aenean euismod elementum. Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Ultrices tincidunt arcu non sodales neque. Duis ultricies lacus sed turpis tincidunt id aliquet. Imperdiet dui accumsan sit amet nulla facilisi. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Facilisi morbi tempus iaculis urna id volutpat. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices. Sapien nec sagittis aliquam malesuada.'
     },
   ]
 }
