@@ -3,7 +3,9 @@ import messageThreadsReducer from '../reducers/messageThreadsSlice'
 import messageThreadReducer from '../reducers/messageThreadSlice'
 import messageReducer from '../reducers/messageSlice'
 import recipesSlice from '../reducers/recipesSlice';
+import recipeSlice from '../reducers/recipeSlice';
 import tagsSlice from '../reducers/tagsSlice';
+
 
 export default configureStore({
   reducer: {
@@ -11,6 +13,7 @@ export default configureStore({
     messageThread: messageThreadReducer,
     messageReducer: messageReducer,
     recipes: recipesSlice,
-    tags: tagsSlice
+    tags: tagsSlice,
+    recipe: recipeSlice
   }
 });
