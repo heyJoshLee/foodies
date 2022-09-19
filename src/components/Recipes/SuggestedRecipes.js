@@ -12,22 +12,22 @@ const SuggestedRecipes = () => {
       name: 'burger',
       rating: 3,
       image: RecipeImagePlaceholder,
-      _id: 1
+      _id: 2
     }, {
       name: 'burger',
       rating: 3,
       image: RecipeImagePlaceholder,
-      _id: 1
+      _id: 3
     }, {
       name: 'burger',
       rating: 3,
       image: RecipeImagePlaceholder,
-      _id: 1
+      _id: 4
     }, {
       name: 'burger',
       rating: 3,
       image: RecipeImagePlaceholder,
-      _id: 1
+      _id: 5
     },
 
   ]
@@ -36,7 +36,7 @@ const SuggestedRecipes = () => {
   return (
     <div className='suggested-recipes'>
       <ul className='list-group'>
-        {recipes.map((recipe) => <SuggestedRecipe key={`suggested-recipe-${recipe.name}`} recipe={recipe} />)}
+        {recipes.map((recipe) => <SuggestedRecipe key={`suggested-recipe-${recipe._id}`} recipe={recipe} />)}
       </ul>
     </div>
   )
