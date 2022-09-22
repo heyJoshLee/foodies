@@ -18,7 +18,6 @@ const YourReview = (props) => {
     }
   }
 
-
   return (
     <div className='review' style={styles.review}>
       <div className='post m-5' >

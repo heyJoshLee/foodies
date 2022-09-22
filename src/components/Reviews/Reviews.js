@@ -9,7 +9,6 @@ const Reviews = (props) => {
 
   return (
     <div className='mt-5'>
-      <YourReview recipe={recipe} setYourReview={setYourReview} yourReview={yourReview} />
       <h2>Reviews</h2>
       {reviews.map((review, index) => <Review key={`review-${index}`} review={review} />)}
     </div>

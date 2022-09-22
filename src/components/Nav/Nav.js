@@ -10,16 +10,11 @@ const Nav = () => {
       <Link className="nav-link text-white text-white" to='/messages'>Messages</Link>
       <Link className="nav-link text-white" to="/saved">Saved</Link>
       <a className="nav-link text-white" href="#">Profile</a>
-      <a className="nav-link text-white" href="#">
-        <div type='button' className='btn btn-light'>
-          New Post
-        </div>
-      </a>
-      <a className="nav-link text-white" href="#">
+      <Link className="nav-link text-white" to="/recipes/new">
         <div type='button' className='btn btn-light'>
           New Recipe
         </div>
-      </a>    </nav>
+      </Link>    </nav>
   )
 }
 
