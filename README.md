@@ -4,9 +4,12 @@
 
 A social media app for sharing recipes. Built using React.
 
-##To do
+## To do
 
 ---
+
+General styling
+Create backend/api
 
 ### reviews
 
