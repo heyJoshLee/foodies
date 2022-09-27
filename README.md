@@ -11,7 +11,7 @@ A social media app for sharing recipes. Built using React.
 General styling
 Create backend/api
 
-### reviews
+### Reviews
 
 - Call api to see if the current user has reviewed the current item. Render contional components
 
