@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const NewRecipeIngredient = (props) => {
   const { index, handleOnChangeIngredient, deleteIngredient, ingredient } = props;
-  const { tempId } = ingredient;
 
   const [formData, setFormData] = useState({
     quantity: ingredient.values.quantity || "",

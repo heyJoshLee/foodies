@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NewRecipeIngredient from './NewRecipeIngredient';
-
+import NewRecipeDirectionsContainer from './NewRecipeDirectionsContainer';
 const NewRecipe = () => {
 
 
@@ -79,6 +79,9 @@ const NewRecipe = () => {
       <ol>
         {formData.ingredients.map((ingredient, index) => <NewRecipeIngredient ingredient={ingredient} key={`ingredient-${index}`} index={index} handleOnChangeIngredient={handleOnChangeIngredient} deleteIngredient={deleteIngredient} />)}
       </ol>
+      <div className="mb-3">
+        <NewRecipeDirectionsContainer />
+      </div>
       <div className="mb-3">
         <label htmlFor="recipe-tags" className="form-label">Tags</label>
         <input required type="input" className="form-control" id="recipe-tags" placeholder="Burger, Beef, etc..." name='tags' />
