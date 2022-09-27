@@ -1,12 +1,8 @@
 # Foodies
 
----
-
 A social media app for sharing recipes. Built using React.
 
 ## To do
-
----
 
 General styling
 Create backend/api
@@ -23,8 +19,6 @@ Create backend/api
 - Support file uploading
 
 ## Icon Credits
-
----
 
 <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Freepik - Flaticon</a>
